@@ -226,8 +226,11 @@
 
 
     //Try/Catch
-    try{
+    const calc = document.getElementById("calculate");
+    calc.addEventListener("click", function(){
+      try{
       let firstNum = document.getElementById("first-num");
+      firstNum = firstNum.innerText;
       alert(firstNum);
 
       if(typeof(firstNum) != "number"){
@@ -240,6 +243,7 @@
     finally{
       alert("Thanks for using the calculator!");
     }
+    });
 
   
     
