@@ -114,7 +114,7 @@
     }
     );
 
-    const count = document.getElementById("log");
+    const count = document.getElementById("count");
     count.addEventListener("click", function(){
       console.count();
         }
@@ -148,7 +148,7 @@
     );
 
     const consoleDirxml = document.getElementById("dirxml");
-    consoleLog.addEventListener("click", function(){
+    consoleDirxml.addEventListener("click", function(){
       console.dirxml(document);
     }
     );
@@ -211,6 +211,12 @@
       const third = () => { fourth(); };
       const fourth = () => { console.trace(); };
       first();
+    }
+    );
+
+     const gTrigger = document.getElementById("trigger");
+     gTrigger.addEventListener("click", function(){
+      gTrigger = document.getElementById("log");
     }
     );
 
