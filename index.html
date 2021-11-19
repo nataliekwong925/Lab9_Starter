@@ -226,23 +226,47 @@
 
 
     //Try/Catch
+    class CalculationError extends Error{
+      constructor(message){
+        super(message);
+        this.name = CalculationError;
+      }
+    }
+    
     const calc = document.getElementById("calculate");
     calc.addEventListener("click", function(){
+      //Stemp 3
       try{
-      let firstNum = document.getElementById("first-num");
-      firstNum = firstNum.innerText;
-      alert(firstNum);
-
+      let firstNum = document.getElementById("first-num").value;
       if(typeof(firstNum) != "number"){
-        throw new SyntaxError("Invalied number");
+        throw new SyntaxError("Invalid number");
       }
     } 
     catch (err){
-      alert("Please enter a number");
+      alert("Please enter a number for the first value.");
     }
     finally{
       alert("Thanks for using the calculator!");
     }
+
+
+    //Step 4
+    try{
+      let secondNum = document.getElementById("second-num").value;
+      if(typeof(secondNum) != "number"){
+        throw new CalculationError("Invalied number!");
+      }
+    } 
+    catch (err){
+      alert("Please enter a number for the second value.");
+    }
+    finally{
+      alert("Try again!!");
+    }
+
+
+
+
     });
 
   
