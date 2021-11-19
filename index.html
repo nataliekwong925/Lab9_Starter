@@ -232,12 +232,12 @@
         this.name = CalculationError;
       }
     }
-    
+
     const calc = document.getElementById("calculate");
     calc.addEventListener("click", function(){
-      //Stemp 3
+      //Step 3
       try{
-      let firstNum = document.getElementById("first-num").value;
+      let firstNum = document.querySelector('#first-num').value;
       if(typeof(firstNum) != "number"){
         throw new SyntaxError("Invalid number");
       }
@@ -252,7 +252,7 @@
 
     //Step 4
     try{
-      let secondNum = document.getElementById("second-num").value;
+      let secondNum = document.querySelector('#second-num').value;
       if(typeof(secondNum) != "number"){
         throw new CalculationError("Invalied number!");
       }
@@ -263,10 +263,6 @@
     finally{
       alert("Try again!!");
     }
-
-
-
-
     });
 
   
