@@ -238,11 +238,11 @@
         //Step 3
         try {
           let firstNum = document.querySelector("#first-num").value;
-          if (isNan(firstNum)) {
+          if (isNaN(firstNum)) {
             throw new SyntaxError("Invalid number");
           }
         } catch (err) {
-          alert("Please enter a number for the first value.");
+          alert(err.message);
         } finally {
           alert("Thanks for using the calculator!");
         }
@@ -250,11 +250,11 @@
         //Step 4
         try {
           let secondNum = document.querySelector("#second-num").value;
-          if (isNan(secondNum)) {
+          if (isNaN(secondNum)) {
             throw new CalculationError("Invalid number!");
           }
         } catch (err) {
-          alert("Please enter a number for the second value.");
+          alert(err.message);
         } finally {
           alert("Have fun!");
         }
