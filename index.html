@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>
+      window.TrackJS &&
+        TrackJS.install({
+          token: "485ba803e2684792b4588956eb4fd749",
+          // for more configuration options, see https://docs.trackjs.com
+        });
+    </script>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -85,15 +94,6 @@
         <button id="trigger">Trigger a Global Error</button>
       </section>
     </main>
-
-    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-    <script>
-      window.TrackJS &&
-        TrackJS.install({
-          token: "485ba803e2684792b4588956eb4fd749",
-          // for more configuration options, see https://docs.trackjs.com
-        });
-    </script>
 
     <script>
       let form = document.querySelector("form");
@@ -239,7 +239,7 @@
         try {
           let firstNum = document.querySelector("#first-num").value;
           alert(firstNum);
-          if (typeof(firstNum) != "number") {
+          if (typeof firstNum != "number") {
             throw new SyntaxError("Invalid number");
           }
         } catch (err) {
@@ -251,7 +251,7 @@
         //Step 4
         try {
           let secondNum = document.querySelector("#second-num").value;
-          if (typeof(secondNum) != "number") {
+          if (typeof secondNum != "number") {
             throw new CalculationError("Invalied number!");
           }
         } catch (err) {
