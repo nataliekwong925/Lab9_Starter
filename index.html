@@ -238,7 +238,7 @@
         //Step 3
         try {
           let firstNum = document.querySelector("#first-num").value;
-          if (typeof firstNum != 'number') {
+          if (isNan(firstNum)) {
             throw new SyntaxError("Invalid number");
           }
         } catch (err) {
@@ -250,7 +250,7 @@
         //Step 4
         try {
           let secondNum = document.querySelector("#second-num").value;
-          if (typeof secondNum != 'number') {
+          if (isNan(secondNum)) {
             throw new CalculationError("Invalid number!");
           }
         } catch (err) {
