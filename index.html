@@ -239,7 +239,7 @@
         try {
           let firstNum = document.querySelector("#first-num").value;
           alert(firstNum);
-          if (typeof firstNum != "number") {
+          if (typeof(firstNum) != "number") {
             throw new SyntaxError("Invalid number");
           }
         } catch (err) {
@@ -251,7 +251,7 @@
         //Step 4
         try {
           let secondNum = document.querySelector("#second-num").value;
-          if (typeof secondNum != "number") {
+          if (typeof(secondNum) != "number") {
             throw new CalculationError("Invalied number!");
           }
         } catch (err) {
